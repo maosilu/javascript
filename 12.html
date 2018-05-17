@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>删除最后一个元素</title>
+	<script type="text/javascript">
+		function del(){
+			var li = document.getElementsByTagName('li');
+			var lastLi = li[li.length-1];
+			lastLi.parentNode.removeChild(lastLi);
+		}
+	</script>
+</head>
+<body>
+	<h2>删除节点</h2>
+	<input type="button" value="删除最后一个li" name="" onclick="del();">
+	<ul>
+		<li>春</li>
+		<li>夏</li>
+		<li>秋</li>
+		<li>冬</li>
+	</ul>
+</body>
+</html>
