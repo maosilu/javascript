@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<h1>关键是找对象</h1>
+	<div id="test1">
+		<p>p1</p>
+		<p>p2</p>
+		<p>p3</p>
+	</div>
+	<div class="test2">class test2</div>
+	<input type="text" name="username" id="" value="poly">
+</body>
+<script type="text/javascript">
+	// 用id来查询，返回值是“对象”
+	// alert(document.getElementById('test1'));
+
+	// 用标签来查询，返回值是“对象的集合”，即使只找到1个对象，也包装成对象集合返回
+	// alert(document.getElementsByTagName('p'));
+	ps = document.getElementsByTagName('p');
+	// alert(ps.length)
+	ps[0].style.background = 'orange';
+
+	// 对于表单元素，可以用name来查询，返回值是对象集合
+	// alert(document.getElementsByName('username')[0].value);
+	document.getElementsByName('username')[0].value = 'Lucy';
+	// alert(name[0].value);
+
+	// 按照类名查找，返回对象集合
+	// alert(document.getElementsByClassName('test2'));
+	cla = document.getElementsByClassName('test2');
+	cla[0].style.background = 'gray';
+
+	// 找子节点
+	// alert(document.getElementById('test1').childNodes.length);
+	// children非标准属性，但兼容性很好，他不包含空白节点
+	// alert(document.getElementById('test1').children.length);
+
+	// 找父节点
+	document.getElementsByTagName('p')[2].parentNode.style.border = '1px solid green';
+</script>
+</html>

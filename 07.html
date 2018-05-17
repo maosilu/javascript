@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function toggle(){
+			var to = document.getElementById('test');
+			if(to.src.indexOf('on') >= 0){
+				to.src = 'off.jpg';
+			}else{
+				to.src = 'on.jpg';
+			}
+		}
+	</script>
+</head>
+<body>
+	<img src="on.jpg" id="test" onclick="toggle();">
+</body>
+</html>

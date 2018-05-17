@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script type="text/javascript">
+	console.log(1+2+3+'hello'+4+5); //答案为：6hello45  原因：一旦碰到非法数字后，后面的一律理解为“拼接”
+
+	//js中，逻辑运算，返回的是最早能判断表达式结果的那个值
+	var a = false;
+	var b = 6;
+	var c = true;
+	var d = a || b || c;
+	console.log(d); //答案：6
+</script>
+<body>
+
+</body>
+</html>
