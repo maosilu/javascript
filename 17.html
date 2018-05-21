@@ -11,11 +11,12 @@
 
 			if(time == 0){
 				document.getElementsByTagName('img')[0].src = 'warn.jpg';
+				clearInterval(clock);
 			}
 
 		}
 
-		window.setInterval('bang()', 1000);
+		var clock = window.setInterval('bang()', 1000);
 	</script>
 </head>
 <body>
