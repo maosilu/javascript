@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>setTimeout 循环调用</title>
+	<script type="text/javascript">
+		var clock = null;
+
+		function bang(){
+			var sec = document.getElementsByTagName('span')[0];
+			var time = parseInt(sec.innerText)-1;
+			sec.innerText = time;
+
+			if(time == 0){
+				document.getElementsByTagName('img')[0].src = 'warn.jpg';
+				clearTimeout(clock);
+			}else{
+				window.setTimeout('bang()', 1000);
+			}
+
+		}
+
+		clock = window.setTimeout('bang()', 1000);
+	</script>
+</head>
+<body>
+	<h1>setTimeout，实现每<span>5</span>秒后爆炸</h1>
+	<img src="bom.jpg">
+</body>
+</html>
