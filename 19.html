@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>常见事件</title>
+	<style type="text/css">
+		div{
+			width:200px;
+			height:200px;
+			background:gray;
+		}
+	</style>
+	<script type="text/javascript">
+		function t1(){
+			document.getElementsByName('username')[0].style.border = '2px solid red';
+		}
+		function t2(){
+			document.getElementsByName('username')[0].style.border = '';
+		}
+		function t3(){
+			alert('hello world');
+		}
+	</script>
+</head>
+<body>
+	<h1>onfocus onblur onmouseover事件</h1>
+	user: <input type="text" name="username" onfocus="t1();" onblur="t2();">
+	email: <input type="text" name="email">
+	<div onmouseover="t3();"></div>
+</body>
+</html>
