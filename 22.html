@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>事件 行为 结构相分离</title>
+	<style type="text/css">
+		div{
+			width:300px;
+			height:100px;
+			border:2px solid green;
+		}
+	</style>
+</head>
+<body>
+	<div>好</div>
+</body>
+<script type="text/javascript">
+	var div = document.getElementsByTagName('div')[0];
+	// alert(div.style.borderColor);
+
+	// 第一种写法
+	// function bian(){
+	// 	div.style.borderColor = 'red';
+	// }
+
+	// div.onclick = bian;
+
+
+	// 第二种写法，简化写法
+	// div.onclick = function(){
+	// 	div.style.borderColor = 'red';
+	// };
+
+	// 第三种方法，再次简化
+	div.onclick = function(){
+		this.style.borderColor = 'red';
+	}
+
+</script>
+</html>
