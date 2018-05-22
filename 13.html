@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>新增节点</title>
+	<script type="text/javascript">
+		function add(){
+			var li = document.createElement('li');
+			var txt = document.createTextNode('冬');
+			li.appendChild(txt);
+			document.getElementsByTagName('ul')[0].appendChild(li);
+		}
+	</script>
+</head>
+<body>
+	<h2>新增节点</h2>
+	<input type="button" value="新增一个li" name="" onclick="add();">
+
+	<ul>
+		<li>春</li>
+		<li>夏</li>
+		<li>秋</li>
+	</ul>
+</body>
+</html>
