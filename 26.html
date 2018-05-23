@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>正则验证邮箱</title>
+</head>
+<body>
+	<pre>
+		1. 用户名只能是字母及数字6-11位
+		2. email为正确的email
+	</pre>
+	<form action="" onsubmit="return veri();">
+		<p>用户名：<input type="text" name="username"></p>
+		<p>邮箱：<input type="text" name="email"></p>
+		<p><input type="submit" name="" value="提交"></p>
+	</form>
+</body>
+<script type="text/javascript">
+	function veri(){
+		var username = document.getElementsByName('username')[0].value;
+		var email = document.getElementsByName('email')[0].value;
+
+		var pattern_name = /^[0-9a-zA-z]{6,11}$/;
+		var pattern_email = /^[0-9a-zA-z\-]+@[0-9a-zA-z\-]+(\.\w+)+$/;
+
+		if(!pattern_name.test(username)){
+			alert('用户名不正确');
+			return false;
+		}
+		if(!pattern_email.test(email)){
+			alert('邮箱不正确');
+			return false;
+		}
+	}
+</script>
+</html>
